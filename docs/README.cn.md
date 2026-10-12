@@ -47,6 +47,8 @@ Use $agent-docs-maintainer:project-docs-bootstrap to initialize a minimal docume
 
 ## 维护
 
+从[文档入口](index.md)查看从 Vibekits 迁入的使用说明、历史设计或审查资料。
+
 plugin-catalog.json 是元数据维护入口；两端 manifest 和用于独立调试的 marketplace 均由脚本生成，指向本仓库根目录。从仓库根目录运行检查：
 
 ~~~bash
