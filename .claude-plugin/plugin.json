@@ -1,0 +1,30 @@
+{
+  "name": "agent-docs-maintainer",
+  "description": "Minimal project progress and plan/spec storage, with shared document rules for explicit README, planning, architecture, guidance, and organization workflows.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Laxpud"
+  },
+  "homepage": "https://github.com/Laxpud/agent-docs-maintainer",
+  "repository": "https://github.com/Laxpud/agent-docs-maintainer",
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "readme",
+    "refactor",
+    "planning",
+    "todo",
+    "roadmap",
+    "milestone",
+    "backlog",
+    "architecture",
+    "mermaid",
+    "adr",
+    "agents",
+    "claude",
+    "project-guidance"
+  ],
+  "skills": [
+    "./skills/"
+  ]
+}

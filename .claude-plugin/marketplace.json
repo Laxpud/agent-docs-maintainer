@@ -1,0 +1,27 @@
+{
+  "name": "laxpud-agent-docs-maintainer",
+  "description": "Minimal project progress and plan/spec storage, with shared document rules for explicit README, planning, architecture, guidance, and organization workflows.",
+  "owner": {
+    "name": "Laxpud"
+  },
+  "plugins": [
+    {
+      "name": "agent-docs-maintainer",
+      "description": "Minimal project progress and plan/spec storage, with shared document rules for explicit README, planning, architecture, guidance, and organization workflows.",
+      "version": "2.0.0",
+      "author": {
+        "name": "Laxpud"
+      },
+      "source": "./",
+      "category": "workflow",
+      "tags": [
+        "documentation",
+        "readme",
+        "planning",
+        "architecture",
+        "adr",
+        "project-guidance"
+      ]
+    }
+  ]
+}

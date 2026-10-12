@@ -1,0 +1,20 @@
+{
+  "name": "laxpud-agent-docs-maintainer",
+  "interface": {
+    "displayName": "Agent Docs Maintainer"
+  },
+  "plugins": [
+    {
+      "name": "agent-docs-maintainer",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "marketplace": {
+    "id": "laxpud-agent-docs-maintainer",
+    "displayName": "Agent Docs Maintainer",
+    "description": "Minimal project progress and plan/spec storage, with shared document rules for explicit README, planning, architecture, guidance, and organization workflows.",
+    "owner": "Laxpud"
+  },
+  "publisher": {
+    "name": "Laxpud",
+    "url": "https://github.com/Laxpud",
+    "homepage": "https://github.com/Laxpud/agent-docs-maintainer",
+    "repository": "https://github.com/Laxpud/agent-docs-maintainer",
+    "license": "MIT"
+  },
+  "plugins": [
+    {
+      "id": "agent-docs-maintainer",
+      "directory": ".",
+      "version": "2.0.0",
+      "description": "Minimal project progress and plan/spec storage, with shared document rules for explicit README, planning, architecture, guidance, and organization workflows.",
+      "category": "Productivity",
+      "keywords": [
+        "documentation",
+        "readme",
+        "refactor",
+        "planning",
+        "todo",
+        "roadmap",
+        "milestone",
+        "backlog",
+        "architecture",
+        "mermaid",
+        "adr",
+        "agents",
+        "claude",
+        "project-guidance"
+      ],
+      "skills": [
+        {
+          "id": "project-docs-bootstrap",
+          "path": "skills/project-docs-bootstrap"
+        },
+        {
+          "id": "project-docs-refactor",
+          "path": "skills/project-docs-refactor"
+        },
+        {
+          "id": "project-docs-readme",
+          "path": "skills/project-docs-readme"
+        },
+        {
+          "id": "project-docs-planning",
+          "path": "skills/project-docs-planning"
+        },
+        {
+          "id": "project-docs-architecture",
+          "path": "skills/project-docs-architecture"
+        },
+        {
+          "id": "project-docs-guidance",
+          "path": "skills/project-docs-guidance"
+        },
+        {
+          "id": "project-docs-progress",
+          "path": "skills/project-docs-progress"
+        }
+      ],
+      "platforms": {
+        "codex": {
+          "installation": "AVAILABLE",
+          "authentication": "ON_INSTALL",
+          "displayName": "Agent Docs Maintainer",
+          "shortDescription": "Minimal progress, plan storage, and documentation",
+          "longDescription": "Track project progress and handle plan/spec file requests. Explicit skills cover documentation setup, refactoring, README and usage, planning, architecture and ADRs, and project guidance using shared references.",
+          "defaultPrompt": [
+            "Use $agent-docs-maintainer:project-docs-bootstrap to initialize a minimal documentation baseline for this repository.",
+            "Use $agent-docs-maintainer:project-docs-refactor to audit or reorganize this repository's documentation structure and ownership.",
+            "Use $agent-docs-maintainer:project-docs-readme to create or maintain the README, official translations, and task-based usage guide.",
+            "Use $agent-docs-maintainer:project-docs-planning to organize TODO, roadmap, milestones, backlog, and plan/spec storage and archiving without rewriting plan/spec content.",
+            "Use $agent-docs-maintainer:project-docs-architecture to maintain current or target architecture, Mermaid diagrams, and ADRs.",
+            "Use $agent-docs-maintainer:project-docs-guidance to create or refine AGENTS.md, scoped rules, and the CLAUDE.md symlink.",
+            "Use $agent-docs-maintainer:project-docs-progress to continue the current task with minimal progress, or create, save, and link a project plan/spec file using project storage conventions."
+          ]
+        },
+        "claude": {
+          "category": "workflow",
+          "tags": [
+            "documentation",
+            "readme",
+            "planning",
+            "architecture",
+            "adr",
+            "project-guidance"
+          ]
+        }
+      }
+    }
+  ]
+}

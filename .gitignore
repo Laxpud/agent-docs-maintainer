@@ -1,0 +1,34 @@
+# 操作系统文件
+Thumbs.db
+.DS_Store
+
+# Python 相关
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境
+venv/
+env/
+
+# 编辑器相关
+.vscode/
+.idea/
+.trae/
+.claude/
+
+# 本地参考资料
+ref/
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# 构建产物
+build/
+dist/
+*.egg-info/
+
+# 插件更新端到端测试报告
+artifacts/plugin-update-e2e/
