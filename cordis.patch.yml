@@ -1,0 +1,4 @@
+# 由 scripts/sync_plugin_metadata.py 生成；仅新增本插件，不替换 preset。
+- insert:
+    - id: "agent-docs-maintainer"
+      name: "@laxpud/agent-docs-maintainer"

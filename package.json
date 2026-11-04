@@ -1,0 +1,55 @@
+{
+  "name": "@laxpud/agent-docs-maintainer",
+  "version": "2.0.0",
+  "description": "Seven self-contained documentation skills; only project progress permits implicit invocation.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Laxpud",
+    "url": "https://github.com/Laxpud"
+  },
+  "homepage": "https://github.com/Laxpud/agent-docs-maintainer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Laxpud/agent-docs-maintainer"
+  },
+  "keywords": [
+    "documentation",
+    "readme",
+    "refactor",
+    "planning",
+    "todo",
+    "roadmap",
+    "milestone",
+    "backlog",
+    "architecture",
+    "mermaid",
+    "adr",
+    "agents",
+    "claude",
+    "project-guidance"
+  ],
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "exports": {
+    ".": "./dsh/index.js",
+    "./locale/*.json": "./dsh/locale/*.json",
+    "./icon": "./dsh/icon.svg"
+  },
+  "files": [
+    "dsh/",
+    "cordis.patch.yml",
+    "skills/",
+    "docs/",
+    "MIGRATION.md",
+    "!**/__pycache__/**",
+    "!**/*.pyc"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

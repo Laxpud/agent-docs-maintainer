@@ -67,6 +67,14 @@
         }
       ],
       "platforms": {
+        "dsh": {
+          "packageName": "@laxpud/agent-docs-maintainer",
+          "engine": ">=0.2.1-rc.2 <0.3.0",
+          "title": "Agent Docs Maintainer",
+          "description": "Seven self-contained documentation skills; only project progress permits implicit invocation.",
+          "titleZh": "代理文档维护",
+          "descriptionZh": "提供七个自包含文档技能，仅项目进度技能允许自动调用。"
+        },
         "codex": {
           "installation": "AVAILABLE",
           "authentication": "ON_INSTALL",

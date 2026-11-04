@@ -1,0 +1,72 @@
+[
+  {
+    "name": "project-docs-bootstrap",
+    "description": "Use only when explicitly invoked to create a missing documentation baseline.",
+    "invocation": {
+      "modelInvocable": false,
+      "userInvocable": true
+    },
+    "file": "skills/project-docs-bootstrap/SKILL.md",
+    "frontmatter": "---\nname: project-docs-bootstrap\ndescription: Use only when explicitly invoked to create a missing documentation baseline.\ndisable-model-invocation: true\n---\n"
+  },
+  {
+    "name": "project-docs-refactor",
+    "description": "Use only when explicitly invoked to reorganize documentation, ownership, or navigation.",
+    "invocation": {
+      "modelInvocable": false,
+      "userInvocable": true
+    },
+    "file": "skills/project-docs-refactor/SKILL.md",
+    "frontmatter": "---\nname: project-docs-refactor\ndescription: Use only when explicitly invoked to reorganize documentation, ownership, or navigation.\ndisable-model-invocation: true\n---\n"
+  },
+  {
+    "name": "project-docs-readme",
+    "description": "Use only when explicitly invoked to create, review, or update README, translations, or usage guides.",
+    "invocation": {
+      "modelInvocable": false,
+      "userInvocable": true
+    },
+    "file": "skills/project-docs-readme/SKILL.md",
+    "frontmatter": "---\nname: project-docs-readme\ndescription: Use only when explicitly invoked to create, review, or update README, translations, or usage guides.\ndisable-model-invocation: true\n---\n"
+  },
+  {
+    "name": "project-docs-planning",
+    "description": "Use only when explicitly invoked to organize TODO, roadmap, milestones, backlog, or plan/spec files.",
+    "invocation": {
+      "modelInvocable": false,
+      "userInvocable": true
+    },
+    "file": "skills/project-docs-planning/SKILL.md",
+    "frontmatter": "---\nname: project-docs-planning\ndescription: Use only when explicitly invoked to organize TODO, roadmap, milestones, backlog, or plan/spec files.\ndisable-model-invocation: true\n---\n"
+  },
+  {
+    "name": "project-docs-architecture",
+    "description": "Use only when explicitly invoked for architecture, technical mechanisms, source relationships, or ADRs.",
+    "invocation": {
+      "modelInvocable": false,
+      "userInvocable": true
+    },
+    "file": "skills/project-docs-architecture/SKILL.md",
+    "frontmatter": "---\nname: project-docs-architecture\ndescription: Use only when explicitly invoked for architecture, technical mechanisms, source relationships, or ADRs.\ndisable-model-invocation: true\n---\n"
+  },
+  {
+    "name": "project-docs-guidance",
+    "description": "Use only when explicitly invoked to create or refine AGENTS.md, CLAUDE.md, or scoped guidance.",
+    "invocation": {
+      "modelInvocable": false,
+      "userInvocable": true
+    },
+    "file": "skills/project-docs-guidance/SKILL.md",
+    "frontmatter": "---\nname: project-docs-guidance\ndescription: Use only when explicitly invoked to create or refine AGENTS.md, CLAUDE.md, or scoped guidance.\ndisable-model-invocation: true\n---\n"
+  },
+  {
+    "name": "project-docs-progress",
+    "description": "Track existing project tasks or apply storage conventions to project plan/spec file requests.",
+    "invocation": {
+      "modelInvocable": true,
+      "userInvocable": true
+    },
+    "file": "skills/project-docs-progress/SKILL.md",
+    "frontmatter": "---\nname: project-docs-progress\ndescription: Track existing project tasks or apply storage conventions to project plan/spec file requests.\ndisable-model-invocation: false\n---\n"
+  }
+]

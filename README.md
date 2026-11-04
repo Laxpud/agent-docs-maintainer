@@ -4,7 +4,7 @@
 
 Minimal project progress and plan/spec storage, with shared document rules for explicit README, planning, architecture, guidance, and organization workflows.
 
-This repository maintains the standalone plugin named `agent-docs-maintainer` for Codex and Claude Code. Client installation validation and release preparation remain pending; see [remaining migration work](MIGRATION.md).
+This repository maintains the standalone plugin `agent-docs-maintainer` for Codex, Claude Code, and DSH.
 
 ## Skills
 
@@ -20,7 +20,7 @@ Edit sources/project-docs/ and run python3 scripts/build_project_docs.py --write
 
 ## Installation
 
-The GitHub repository is `Laxpud/agent-docs-maintainer`. The commands below describe the intended installation flow; actual installation and execution in both clients remain unverified. If the repository address changes, update publisher.homepage and publisher.repository in plugin-catalog.json and both README files, then regenerate metadata with --write.
+Install from `Laxpud/agent-docs-maintainer` using the commands below.
 
 Codex, in a terminal:
 
@@ -41,17 +41,17 @@ Claude Code, in the client input area:
 /plugin install agent-docs-maintainer@laxpud-agent-docs-maintainer
 ~~~
 
-Start a new task or session after installation. Example prompt:
+DSH, in a terminal; replace `<profile>` with your profile name:
 
-~~~text
-Use $agent-docs-maintainer:project-docs-bootstrap to initialize a minimal documentation baseline for this repository.
+~~~bash
+dsh plugin --profile <profile> add github:Laxpud/agent-docs-maintainer
 ~~~
 
 ## Maintenance
 
-See the [documentation index](docs/index.md) for usage and historical design or review material migrated from Vibekits.
+See the [documentation index](docs/index.md) for usage, design, and review material.
 
-plugin-catalog.json is the metadata source. Generated manifests and local authoring marketplaces point to this repository root. Run these commands from the repository root:
+plugin-catalog.json is the metadata source. Generated Codex/Claude manifests, local authoring marketplaces, and DSH manifest, patch, locales, and skill index point to this repository root. Run these commands from the repository root:
 
 ~~~bash
 python3 scripts/build_project_docs.py
@@ -59,9 +59,9 @@ python3 scripts/sync_plugin_metadata.py --write
 python3 scripts/sync_plugin_metadata.py
 python3 scripts/check_codex_install.py --all
 python3 scripts/check_markdown_links.py
+node --check dsh/index.js
+npm pack --dry-run --ignore-scripts
 ~~~
-
-These checks verify local metadata and files; they do not prove installation or execution in either client. Client installation validation and release preparation remain pending in MIGRATION.md. Direct npx skills distribution is not verified.
 
 ## License
 

@@ -14,4 +14,9 @@ jobs:
       - run: python scripts/sync_plugin_metadata.py
       - run: python scripts/check_codex_install.py --all
       - run: python scripts/check_markdown_links.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --check dsh/index.js
+      - run: npm pack --dry-run --ignore-scripts
       - run: git diff --check

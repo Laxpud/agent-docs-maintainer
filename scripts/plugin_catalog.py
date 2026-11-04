@@ -1,6 +1,6 @@
 """读取并校验独立仓库的单插件 catalog。
 
-catalog 是插件身份、目录、独立版本和双平台分发元数据的唯一事实来源。
+catalog 是插件身份、目录、独立版本和各平台分发元数据的唯一事实来源。
 生成器、安装检查和更新流程都通过本模块解析目标，避免各自维护插件常量。
 """
 
@@ -76,6 +76,7 @@ class PluginSpec:
     skills: tuple[SkillSpec, ...]
     codex: dict[str, Any]
     claude: dict[str, Any]
+    dsh: dict[str, Any]
 
     @property
     def source(self) -> str:
@@ -219,6 +220,13 @@ def load_catalog(root: Path, path: Path = CATALOG_PATH) -> PluginCatalog:
         platforms = _mapping(item.get("platforms"), f"{field}.platforms")
         codex = _mapping(platforms.get("codex"), f"{field}.platforms.codex")
         claude = _mapping(platforms.get("claude"), f"{field}.platforms.claude")
+        dsh = _mapping(platforms.get("dsh"), f"{field}.platforms.dsh")
+        for dsh_field in (
+            "packageName", "engine", "title", "description", "titleZh", "descriptionZh",
+        ):
+            _string(dsh.get(dsh_field), f"{field}.platforms.dsh.{dsh_field}")
+        if not re.fullmatch(r"@[a-z0-9-]+/[a-z0-9-]+", dsh["packageName"]):
+            raise CatalogError(f"{field}.platforms.dsh.packageName: expected scoped npm name")
         for codex_field in (
             "installation", "authentication", "displayName", "shortDescription",
             "longDescription",
@@ -252,6 +260,7 @@ def load_catalog(root: Path, path: Path = CATALOG_PATH) -> PluginCatalog:
                 tuple(skills),
                 codex,
                 claude,
+                dsh,
             )
         )
 

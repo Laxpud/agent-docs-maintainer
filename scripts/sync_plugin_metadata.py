@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""从统一 catalog 生成或校验 Codex/Claude marketplace 与 manifest。"""
+"""从统一 catalog 生成或校验 Codex/Claude 元数据和 DSH bundle。"""
 
 from __future__ import annotations
 
@@ -12,6 +12,7 @@ from typing import Any, Iterable
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from scripts.dsh_metadata import generated_dsh_files
 from scripts.plugin_catalog import (
     CATALOG_PATH,
     CLAUDE_MARKETPLACE_PATH,
@@ -119,7 +120,7 @@ def generated_files(
     catalog: PluginCatalog,
     plugins: Iterable[PluginSpec] | None = None,
 ) -> dict[Path, str]:
-    """返回共享 marketplace 与选中插件 manifest 的稳定生成物。"""
+    """返回 marketplace、各平台 manifest 与 DSH 索引及展示元数据的稳定生成物。"""
 
     files = {
         CODEX_MARKETPLACE_PATH: _json(codex_marketplace(catalog)),
@@ -134,6 +135,10 @@ def generated_files(
         files[plugin_root / ".claude-plugin/plugin.json"] = _json(
             claude_manifest(catalog, plugin)
         )
+        files.update({
+            plugin_root / path: content
+            for path, content in generated_dsh_files(root / plugin_root, catalog, plugin).items()
+        })
     return files
 
 
